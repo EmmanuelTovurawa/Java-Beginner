@@ -18,6 +18,12 @@ public class ShoppingCart {
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
         }
+        try {
+            calc.display();
+        } catch (Exception e) {
+            System.out.println(e);
+            e.printStackTrace();
+        }
     }
 
 }
