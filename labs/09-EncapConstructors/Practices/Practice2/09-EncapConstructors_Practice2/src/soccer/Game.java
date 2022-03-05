@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package soccer;
 
 import utility.GameUtils;
@@ -18,7 +12,10 @@ public class Game {
     private Team awayTeam;
     private Goal[] goals;
     
-    /* Practice 9-2. Add constructor here */
+    public Game(Team homeTeam, Team awayTeam) {
+        this.homeTeam = homeTeam;
+        this.awayTeam = awayTeam;
+    }
     
     public void playGame(int maxGoals) {
         int numberOfGoals = (int)(Math.random() * maxGoals + 1);
@@ -32,14 +29,28 @@ public class Game {
     }
     
     public String getDescription() {
+        
+        /* Practice 10-1. Declare two int variables here */
+        
         StringBuilder returnString = new StringBuilder();
+        
+        /* Practice 10-1. Add code to show teams that are playing */
+        
         for (Goal currGoal: this.getGoals()) {
+            
+            /* Practice 10-1. Add if block here */
+            
             returnString.append("Goal scored after "
             + currGoal.getTheTime() + " mins by "
             + currGoal.getThePlayer().getPlayerName() + " of "
             + currGoal.getTheTeam().getTeamName() +
               "\n");
         }
+        
+        /* Practice 10-1. Add if block here */
+        
+        /* Practice 10-1. Add returnString.append() that shows score */
+        
         return returnString.toString();
     }
 

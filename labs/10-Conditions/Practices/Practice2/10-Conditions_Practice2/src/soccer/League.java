@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package soccer;
-
 
 
 /**
@@ -34,6 +28,7 @@ public class League {
 
     public Team[] createTeams() {
 
+        /* Practice 11-1. Remove the code below that creates The Greens and The Reds */
         Player player1 = new Player("George Eliot");
         Player player2 = new Player("Graham Greene");
         Player player3 = new Player("Geoffrey Chaucer");
@@ -48,8 +43,12 @@ public class League {
         team2.getPlayerArray()[0] = new Player("Robert Service");
         team2.getPlayerArray()[1] = new Player("Robbie Burns");
         team2.getPlayerArray()[2] = new Player("Rafael Sabatini");
+        /* Practice 11-1. Remove the above code that creates The Greens and The Reds */
 
         Team[] theTeams = {team1, team2};
+        
+        
+        
         return theTeams;
     }
 
@@ -67,10 +66,16 @@ public class League {
         System.out.println("\nTeam Points");       
            
         for (Team currTeam: theTeams){
-            /* Practice 10-2. Modify the line below to print out the goalsTotal for the current team also */
-            System.out.println(currTeam.getTeamName() + " : " + currTeam.getPointsTotal());
+            System.out.println(currTeam.getTeamName() + " : " + currTeam.getPointsTotal() + " : "
+                     + currTeam.getGoalsTotal());
             currBestTeam = currTeam.getPointsTotal() > currBestTeam.getPointsTotal()?currTeam:currBestTeam;
-            /* Practice 10-2. Remove ternary statement above then add a replacement if statement here */
+            if (currTeam.getPointsTotal() > currBestTeam.getPointsTotal()){
+                currBestTeam = currTeam;
+            } else if (currTeam.getPointsTotal() == currBestTeam.getPointsTotal()){
+                if (currTeam.getGoalsTotal() > currBestTeam.getGoalsTotal()){
+                currBestTeam = currTeam;
+                }
+            }
         }
         
         System.out.println("Winner of the League is " + currBestTeam.getTeamName());

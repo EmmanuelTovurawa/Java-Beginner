@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package soccer;
 
 import java.time.LocalDateTime;
@@ -69,6 +63,8 @@ public class Game {
                     awayTeamGoals++;
                     awayTeam.incGoalsTotal(1);
                 }
+                
+                /* Practice 13-3. Add the line to increment goals scored for a player */
             }
             
             returnString.append(currEvent +" after "

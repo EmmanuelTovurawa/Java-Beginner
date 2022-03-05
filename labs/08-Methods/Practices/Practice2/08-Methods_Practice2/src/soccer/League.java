@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package soccer;
+
+import utility.GameUtils;
 
 /**
  *
@@ -20,24 +17,18 @@ public class League {
         Game[] theGames = createGames(theTeams);
 
         Game currGame = theGames[0];
+        currGame.playGame();
+        System.out.println(currGame.getDescription());
 
-        /* Practice 8-2. Start of code that creates a Goal and assigns to Team and a Game */
-        Goal goal1 = new Goal();
-        goal1.thePlayer = currGame.homeTeam.playerArray[2];
-        goal1.theTeam = currGame.homeTeam;
-        goal1.theTime = 55;
-        Goal[] theGoals = {goal1};
-        currGame.goals = theGoals;
+
         /* Practice 8-2. End of code that creates a Goal and assigns to a Team and a Game */
-        
-        /* Practice 8-2. Add code to initialize the array currGame.goals to a random size */
-        
+
+ /* Practice 8-2. Add code to initialize the array currGame.goals to a random size */
         // Print out goal details
-        System.out.println("Goal scored after "
+        /*System.out.println("Goal scored after "
                 + currGame.goals[0].theTime + " mins by "
                 + currGame.goals[0].thePlayer.playerName + " of "
-                + currGame.goals[0].theTeam.teamName);
-
+                + currGame.goals[0].theTeam.teamName);*/
     }
 
     public static Team[] createTeams() {

@@ -1,9 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package soccer;
+
 
 
 /**
@@ -27,7 +23,7 @@ public class League {
             System.out.println(currGame.getDescription());
         }
         
-        /* Practice 10-1. Add a call to showBestTeam() method here */
+        theLeague.showBestTeam(theTeams);
 
     }
 
@@ -61,6 +57,19 @@ public class League {
         return theGames;
     }
     
-    /* Practice 10-1. Add showBestTeam() method here */
+    public void showBestTeam(Team[] theTeams) {
+        Team currBestTeam = theTeams[0];  
+        System.out.println("\nTeam Points");       
+           
+        for (Team currTeam: theTeams){
+            /* Practice 10-2. Modify the line below to print out the goalsTotal for the current team also */
+            System.out.println(currTeam.getTeamName() + " : " + currTeam.getPointsTotal());
+            currBestTeam = currTeam.getPointsTotal() > currBestTeam.getPointsTotal()?currTeam:currBestTeam;
+            /* Practice 10-2. Remove ternary statement above then add a replacement if statement here */
+        }
+        
+        System.out.println("Winner of the League is " + currBestTeam.getTeamName());
+        
+    }
 
 }

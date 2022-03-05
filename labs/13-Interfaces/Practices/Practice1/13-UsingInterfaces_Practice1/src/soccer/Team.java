@@ -1,21 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package soccer;
 
 /**
  *
  * @author Administrator
  */
+
+/* Practice 13-2. Change class declaration so that it implements Comparable */
 public class Team {
     
     private String teamName;
     private Player[] playerArray;
     private int pointsTotal;
     private int goalsTotal;
+    
+    /* Practice 13-2. Add the compareTo() method here */
+    
     
     public void incGoalsTotal(int goals){
         this.setGoalsTotal(this.getGoalsTotal() + goals);

@@ -26,13 +26,17 @@ public class PlayerDatabase {
             players.add(new Player(authorTokens.nextToken()));
         }
     }
-    
+    /* Practice 14-1, Step 6d. Modify the signature to throw PlayerDatabaseException */
     public Player[] getTeam(int numberOfPlayers){
         Player[] teamPlayers = new Player[numberOfPlayers];
         for (int i = 0; i < numberOfPlayers; i++){
             int playerIndex = (int) (Math.random() * players.size());
+            
+            /* Practice 14-1, Step 6b. Start a try block here */
             teamPlayers[i] = players.get(playerIndex);
             players.remove(playerIndex);
+            /* Practice 14-1, Step 6b. End the try block here */
+            /* Practice 14-1, Step 6c. Add catch block here */
         }
         return teamPlayers;
         

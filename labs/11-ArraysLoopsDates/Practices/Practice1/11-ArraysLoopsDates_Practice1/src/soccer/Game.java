@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package soccer;
 
 import utility.GameUtils;
@@ -18,6 +12,9 @@ public class Game {
     private Team awayTeam;
     private Goal[] goals;
     
+    /* Practice 11-2. Add LocalDateTime attribute here */
+    
+    /* Practice 11-2. Modify the constructor to include the date and time of the game */
     public Game(Team homeTeam, Team awayTeam) {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
@@ -40,6 +37,7 @@ public class Game {
         int awayTeamGoals = 0;
         StringBuilder returnString = new StringBuilder();
         
+        /* Practice 11-2. Modify the next line to include the date and time of the game */
         returnString.append(this.getHomeTeam().getTeamName() + " vs. " +
         this.getAwayTeam().getTeamName() + "\n");
          

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package soccer;
 
 import java.time.LocalDateTime;
@@ -30,10 +25,7 @@ public class League {
         System.out.println(theLeague.getLeagueAnnouncement(theGames));
         for (Game currGame: theGames){
             currGame.playGame();
-            
-            /* Practice 12-1. Add a break command here */
-            
-            /* Practice 12-1. Comment out the line below */
+            //break;
             System.out.println(currGame.getDescription());
         }
         

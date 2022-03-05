@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package soccer;
 
 /**
@@ -15,7 +9,22 @@ public class Team {
     private String teamName;
     private Player[] playerArray;
     
-    /* Practice 9-2. Add the two constructors here */
+    /* Practice 10-1. Add pointTotal variable here */
+    
+    
+    /* Practice 10-1. Add incPointsTotal() method here */
+    
+    
+    public Team(String teamName) {
+        this.teamName = teamName;
+    }
+    
+    public Team(String teamName, Player[] players) {
+        this(teamName);
+        this.playerArray = players;
+    }
+    
+    public Team() {}
 
     /**
      * @return the teamName
