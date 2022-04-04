@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.StringTokenizer;
 import utility.PlayerDatabase;
+import utility.PlayerDatabaseException;
 
 /**
  *
@@ -51,7 +52,7 @@ public class League {
     }
 
     /* Practice 14-1, Step 6e. Modify the signature to throw PlayerDatabaseException */
-    public Team[] createTeams(String teamNames, int teamSize) {
+    public Team[] createTeams(String teamNames, int teamSize) throws PlayerDatabaseException {
 
         PlayerDatabase playerDB = new PlayerDatabase();
 
