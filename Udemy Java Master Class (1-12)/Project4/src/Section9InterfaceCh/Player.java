@@ -12,6 +12,7 @@ import java.util.List;
  * @author Manex
  */
 public class Player implements ISaveable {
+
     private String name;
     private int hitPoints;
     private int strength;
@@ -58,12 +59,12 @@ public class Player implements ISaveable {
 
     @Override
     public String toString() {
-        return "Player{" +
-                "name='" + name + '\'' +
-                ", hitPoints=" + hitPoints +
-                ", strength=" + strength +
-                ", weapon='" + weapon + '\'' +
-                '}';
+        return "Player{"
+                + "name='" + name + '\''
+                + ", hitPoints=" + hitPoints
+                + ", strength=" + strength
+                + ", weapon='" + weapon + '\''
+                + '}';
     }
 
     @Override
@@ -79,7 +80,7 @@ public class Player implements ISaveable {
 
     @Override
     public void read(List<String> savedValues) {
-        if(savedValues != null && savedValues.size() >0) {
+        if (savedValues != null && savedValues.size() > 0) {
             this.name = savedValues.get(0);
             this.hitPoints = Integer.parseInt(savedValues.get(1));
             this.strength = Integer.parseInt(savedValues.get(2));
