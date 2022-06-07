@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Section10GenericClassPt3;
+package Section10GenericsChallenge;
 
 import java.util.ArrayList;
 
@@ -64,17 +64,27 @@ public class Team<T extends Player> implements Comparable<Team<T>> {
             opponent.matchResult(null, theirScore, ourScore);
         }
     }
-    public int ranking(){
-        return(won*2)+ tied;
+
+    public int ranking() {
+        return (won * 2) + tied;
     }
+
     @Override
-    public int compareTo(Team<T> team){
-        if(this.ranking() > team.ranking()){
+    public int compareTo(Team<T> team) {
+        if(this.ranking() > team.ranking()) {
             return -1;
-        }else if(this.ranking() < team.ranking()){
+        } else if(this.ranking() < team.ranking()) {
             return 1;
-        }else{
+        } else {
             return 0;
         }
     }
 }
+
+
+
+
+
+
+
+
