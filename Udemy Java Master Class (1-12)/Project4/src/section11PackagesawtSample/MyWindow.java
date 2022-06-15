@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package section11PackagesPT1;
+package section11PackagesawtSample;
 
 import java.awt.Font;
 import java.awt.Frame;
@@ -35,6 +35,6 @@ public class MyWindow extends Frame {
         g.setFont(sansSerifLarge);
         g.drawString("The Complete Java Developer Course", 60, 60);
         g.setFont(sansSerifSmall);
-        g.drawString("by Emmanuel Tovurawa", 60, 100);
+        g.drawString("by Manex", 60, 100);
     }
 }
