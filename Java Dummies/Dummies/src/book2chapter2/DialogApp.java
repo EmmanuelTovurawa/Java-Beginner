@@ -2,21 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package chapter2;
+package book2chapter2;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Manex
  */
-public class ScannerApp {
-
-    static Scanner sc = new Scanner(System.in);
+public class DialogApp {
 
     public static void main(String[] args) {
-        System.out.print("Enter an integer: ");
-        int x = sc.nextInt();
+        String s;
+        s = JOptionPane.showInputDialog("Enter an integer:");
+        int x = Integer.parseInt(s);
         System.out.println("You entered " + x + ".");
     }
 }
