@@ -28,6 +28,7 @@ interface Playable {
 
 class Game implements Playable {
 
+    @Override
     public void play() {
         System.out.println("Good luck!");
     }
